@@ -1,7 +1,7 @@
 import { useState } from "react"
 import CommissionSimulator from "./tabs/commissions/commission-simulator"
 import { CommissionsContext } from "./context/commissionsContext"
-import { CommissionsContextType, CommissionsData, GoalData, HistoricalData, ProspectData } from "./types/types";
+import { CommissionsContextType, CommissionsData, GoalData, ProspectData } from "./types/types";
 import Charts from "./tabs/charts/charts"
 import Summary from "./tabs/summary/summary"
 
@@ -50,7 +50,7 @@ export default function Home() {
       <div className="min-h-screen bg-gray-900 text-gray-100 w-screen">
         <div className="container mx-auto py-10 px-4 w-full">
           <div className="w-full">
-            <div className="flex items-center justify-cemter mb-8 gap-8">
+            <div className="flex items-center justify-between mb-8 gap-8">
               <div className="w-[400px] flex rounded-lg overflow-hidden border border-gray-700">
                 <button
                   onClick={() => setActiveTab("commission")}
@@ -77,12 +77,14 @@ export default function Home() {
                   Resumen
                 </button>
               </div>
-                <h1 className="text-2xl">Simulador de comisiones</h1>
+              <h1 className="text-xl bg-gray-800/40 px-5 py-1 rounded-lg border border-b-blue-500 border-gray-800">
+                Asistente de comisiones
+              </h1>
             </div>
 
             <div className="bg-gray-800 rounded-lg border border-gray-700 p-6 w-full">
               {activeTab === "commission" ? (
-                <div>
+                <div className="animate-fade-in-y">
                   <div className="mb-4">
                     <h2 className="text-xl font-bold text-white">Comisiones</h2>
                     <p className="text-gray-400">Calcular los porcentajes de venta de tus productos.</p>
@@ -91,7 +93,7 @@ export default function Home() {
                 </div>
               ) : ""}
               {activeTab === "charts" ? (
-                <div className="w-full">
+                <div className="w-full animate-fade-in-y">
                   <div className="mb-4">
                     <h2 className="text-xl font-bold text-white">Gráficos</h2>
                     <p className="text-gray-400">Gráficos para tus ventas.</p>
@@ -100,7 +102,7 @@ export default function Home() {
                 </div>              
               ) : ""}
               {activeTab === "summary" ? (
-                <div className="w-full">
+                <div className="w-full animate-fade-in-y">
                   <div className="mb-4">
                     <h2 className="text-xl font-bold text-white">Resumen</h2>
                     <p className="text-gray-400">Resumen completo de todos los datos</p>
