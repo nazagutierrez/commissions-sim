@@ -99,7 +99,7 @@ export default function CommissionSimulator() {
               </label>
               <select
                 required
-                className="w-full px-3 py-2 bg-bg-secondary border border-bg-secondary rounded-md text-main-white focus:outline-none focus:border-b-primary-border transition-colors"
+                className="w-full px-3 py-2 bg-bg-secondary border border-bg-secondary rounded-md text-main-white focus:outline-none focus:border-b-primary transition-colors"
                 name="commission"
                 value={commission}
                 onChange={handleSelectChange}
@@ -127,7 +127,7 @@ export default function CommissionSimulator() {
                   type="number"
                   value={customCommission}
                   onChange={(e) => setCustomCommission(e.target.value)}
-                  className="w-full px-3 py-2 bg-bg-secondary border border-bg-secondary rounded-md text-main-white focus:outline-none focus:border-b-primary-border transition-colors"
+                  className="w-full px-3 py-2 bg-bg-secondary border border-bg-secondary rounded-md text-main-white focus:outline-none focus:border-b-primary transition-colors"
                   placeholder="Ej: 12"
                 />
                 <p className="mt-1 text-xs text-main-gray">Comisión personalizada</p>
@@ -138,7 +138,7 @@ export default function CommissionSimulator() {
             <label className="block text-sm font-medium text-main-white mb-1">Producto</label>
             <select
               required
-              className="w-full px-3 py-2 bg-bg-secondary border border-bg-secondary rounded-md text-main-white focus:outline-none focus:border-b-primary-border transition-colors"
+              className="w-full px-3 py-2 bg-bg-secondary border border-bg-secondary rounded-md text-main-white focus:outline-none focus:border-b-primary transition-colors"
               name="productValue"
             >
               <option value="" selected disabled>Productos</option>
