@@ -89,7 +89,7 @@ export default function CommissionSimulator() {
           <FormInput text="Ingresa tu nombre" label="Nombre de Socio/a" name="name" type="text" placeholder="Ingresa tu nombre" />
           <FormInput text="Ingresa el mes" label="Mes" name="month" type="text" placeholder="Ingresa el mes" />
           <FormInput text="Ingresa el ticket promedio en USD" label="Mi ticket promedio en USD" name="usdTicket" type="number" placeholder="1100" />
-          <FormInput text="Valor USD" label="Valor USD" name="usdValue" type="number" placeholder="1055" />
+          <FormInput text="Valor del USD del día" label="Valor USD" name="usdValue" type="number" placeholder="1055" />
           <FormInput text="Ganancia en pesos esperada" label="Cuanto quiero ganar?" name="profitGoal" type="number" placeholder="1200000" />
           <FormInput text="Tasa de cierre" label="Tasa de clientes cerrados" name="conversionRate" type="text" placeholder="0.30" />
           <div>

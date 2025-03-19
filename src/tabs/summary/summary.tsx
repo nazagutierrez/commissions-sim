@@ -25,7 +25,7 @@ export default function Summary() {
 
   return (
     <div className="h-[70vh] flex flex-col items-center justify-around">
-        <div className="bg-bg-secondary rounded-lg p-6 border border-primary-border/60 w-full">
+        <div className="bg-bg-secondary rounded-lg p-6 w-full">
           <h2 className="text-xl font-bold mb-4">
             Datos de entrada
           </h2>
@@ -76,7 +76,7 @@ export default function Summary() {
         </div>
 
       <div className="flex items-center justify-around gap-10 w-full">
-        <div className="bg-bg-secondary rounded-lg p-6 border border-primary-border/60 w-1/3">
+        <div className="bg-bg-secondary rounded-lg p-6 w-1/3">
           <h2 className="text-xl font-bold mb-4">Objetivos</h2>
           <div className="grid grid-cols-1 grid-rows-3 gap-4">
             <div className="bg-primary/20 p-4 rounded-lg col-span-2">
@@ -106,7 +106,7 @@ export default function Summary() {
           </div>
         </div>
 
-        <div className="bg-bg-secondary rounded-lg p-6 border border-primary-border/60 w-1/3">
+        <div className="bg-bg-secondary rounded-lg p-6 w-1/3">
           <h2 className="text-xl font-bold mb-4">
             Prospectar datos
           </h2>
@@ -135,7 +135,7 @@ export default function Summary() {
         </div>
 
         <div className="flex flex-col items-center justify-around gap-4 w-1/3">
-          <div className="bg-bg-secondary rounded-lg p-6 border border-primary-border/60 w-full">
+          <div className="bg-bg-secondary rounded-lg p-6 w-full">
             <h2 className="text-xl font-bold mb-4">
               Objetivo principal
             </h2>
@@ -146,7 +146,7 @@ export default function Summary() {
               </p>
             </div>
           </div>
-          <div className="bg-bg-secondary rounded-lg p-6 border border-primary-border/60 w-full">
+          <div className="bg-bg-secondary rounded-lg p-6 w-full">
             <h2 className="text-xl font-bold mb-4">
               Capacitación mínima entre campus virtual y oficina
             </h2>
