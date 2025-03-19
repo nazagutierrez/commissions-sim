@@ -15,8 +15,6 @@ export const calculateCommission = ({
 }: {
   updatedCommissionsData: CommissionsData;
   updatedProfitGoal: GoalData["profitGoal"];
-  goalData: GoalData;
-  commissionsData: CommissionsData;
   setGoalData: CommissionsContextType["setGoalData"];
   setProspectData: CommissionsContextType["setProspectData"];
   setCommissionsData: CommissionsContextType["setCommissionsData"];
@@ -25,18 +23,15 @@ export const calculateCommission = ({
   const { productValue, usdValue, usdTicket, commission, conversionRate } =
     updatedCommissionsData;
 
-  // Cálculo de la ganancia neta + IVA
   const IVA = Number("1.21");
 
   const netProfit = Math.round((productValue / IVA) * (commission / 100));
   const needToSell = Math.round((updatedProfitGoal / (commission / 100)) * IVA);
   const runVolume = Math.round(needToSell / usdValue);
-  const monthSales = Math.round(runVolume / usdTicket);
+  const monthSales = runVolume / usdTicket;
   const newDataToProspect = Math.round(monthSales * 6);
-  const minPresentationsMonth = Number(
-    (monthSales / Number(conversionRate)).toFixed(2)
-  );
-  const minPresentationsWeek = Number((minPresentationsMonth / 25).toFixed(1));
+  const minPresentationsMonth = Math.ceil(Number((monthSales / Number(conversionRate))));
+  const minPresentationsWeek = Math.ceil(Number((minPresentationsMonth / 4)));
 
   const updatedGoalData = {
     profitGoal: updatedProfitGoal,
@@ -68,5 +63,5 @@ export const calculateCommission = ({
   saveInLocalStorage("goalData", updatedGoalData);
   saveInLocalStorage("prospectData", updatedProspectData);
 
-  setUpdateFlag(prev => !prev);
+  setUpdateFlag(true);
 };
