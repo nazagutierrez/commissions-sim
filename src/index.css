@@ -1,14 +1,28 @@
 @import "tailwindcss";
 
-:root {
-    --primary-color: #353535;
-    --secondary-color: #353535;
-    --primary-text-color: #353535;
-    --secondary-text-color: #353535;
-}
-
 @theme {
+    /* Color principal */
+    --color-primary: #095b92;
+    --color-primary-border: #094770;
+
+    /* Colores de fondo */
+    --color-bg: #1b1b1b;
+    --color-bg-primary: #2e2e2e;
+    --color-bg-secondary: #3d3d3d;
+
+    /* Colores de texto */
+    --color-main-white: #e9e9e9;
+    --color-main-gray: #a3a3a3;
+    --color-main-color: #85b5d4;
+
+    /* Colores de gráficos */
+    --color-chart-secondary: #bd8e2b;
+
+    /* Gradientes y animaciones */
+    --gradient-custom: radial-gradient(ellipse 70% 90% at 50% 100%,#051f49,transparent 60%);
     --animate-fade-in-y: fade-in-y 0.3s ease-out;
+    --animate-drag-cursor: drag-cursor 2s ease-out infinite;
+
     @keyframes fade-in-y {
       0% {
         opacity: 0;
@@ -19,4 +33,17 @@
         transform: translateY(0px);
       }
     }
-  }
+    
+    @keyframes drag-cursor {
+      0% {
+        transform: translateX(0px);
+      }
+      25% {
+          rotate: -5deg;
+        transform: translateX(-30px);
+    }
+    100% {
+        transform: translateX(0px);
+      }
+    }
+}

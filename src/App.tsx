@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import CommissionSimulator from "./tabs/commissions/commission-simulator"
 import { CommissionsContext } from "./context/commissionsContext"
 import { CommissionsContextType, CommissionsData, GoalData, ProspectData } from "./types/types";
@@ -45,17 +45,24 @@ export default function Home() {
   const [commissionsData, setCommissionsData] = useState<CommissionsData>(defaultCommissionsData.commissionsData);
   const [updateFlag, setUpdateFlag] = useState(false);
 
+  useEffect(() => {
+    if (!updateFlag) return
+    setActiveTab("summary")
+    setUpdateFlag(false)
+  }, [updateFlag])
+  
+
   return (
     <CommissionsContext.Provider value={{ goalData, prospectData, commissionsData, updateFlag, setGoalData, setProspectData, setCommissionsData, setUpdateFlag }}>
-      <div className="min-h-screen bg-gray-900 text-gray-100 w-screen">
+      <div className="min-h-screen bg-bg text-main-white w-screen">
         <div className="container mx-auto py-10 px-4 w-full">
           <div className="w-full">
             <div className="flex items-center justify-between mb-8 gap-8">
-              <div className="w-[400px] flex rounded-lg overflow-hidden border border-gray-700">
+              <div className="w-[400px] flex rounded-lg overflow-hidden border border-primary-border">
                 <button
                   onClick={() => setActiveTab("commission")}
                   className={`flex-1 cursor-pointer py-3 px-4 text-center transition-colors ${
-                    activeTab === "commission" ? "bg-indigo-600 text-white" : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                    activeTab === "commission" ? "bg-primary" : "bg-bg-primary text-main-gray hover:bg-primary"
                   }`}
                 >
                   Comisiones
@@ -63,7 +70,7 @@ export default function Home() {
                 <button
                   onClick={() => setActiveTab("charts")}
                   className={`flex-1 cursor-pointer py-3 px-4 text-center transition-colors ${
-                    activeTab === "charts" ? "bg-indigo-600 text-white" : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                    activeTab === "charts" ? "bg-primary" : "bg-bg-primary text-main-gray hover:bg-primary"
                   }`}
                 >
                   Gráficos
@@ -71,23 +78,23 @@ export default function Home() {
                 <button
                   onClick={() => setActiveTab("summary")}
                   className={`flex-1 cursor-pointer py-3 px-4 text-center transition-colors ${
-                    activeTab === "summary" ? "bg-indigo-600 text-white" : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                    activeTab === "summary" ? "bg-primary" : "bg-bg-primary text-main-gray hover:bg-primary"
                   }`}
                 >
                   Resumen
                 </button>
               </div>
-              <h1 className="text-xl bg-gray-800/40 px-5 py-1 rounded-lg border border-b-blue-500 border-gray-800">
-                Asistente de comisiones
+              <h1 className="text-xl bg-bg-primary px-5 py-1 rounded-lg border border-b-primary-border border-bg-primary">
+                Asistente de comisiones | Sinergia Creativa
               </h1>
             </div>
 
-            <div className="bg-gray-800 rounded-lg border border-gray-700 p-6 w-full">
+            <div className="bg-bg-primary rounded-lg border border-primary-border p-6 w-full">
               {activeTab === "commission" ? (
                 <div className="animate-fade-in-y">
                   <div className="mb-4">
-                    <h2 className="text-xl font-bold text-white">Comisiones</h2>
-                    <p className="text-gray-400">Calcular los porcentajes de venta de tus productos.</p>
+                    <h2 className="text-xl font-bold">Comisiones</h2>
+                    <p className="text-main-gray">Calcular los porcentajes de venta de tus productos.</p>
                   </div>
                   <CommissionSimulator />
                 </div>
@@ -95,8 +102,8 @@ export default function Home() {
               {activeTab === "charts" ? (
                 <div className="w-full animate-fade-in-y">
                   <div className="mb-4">
-                    <h2 className="text-xl font-bold text-white">Gráficos</h2>
-                    <p className="text-gray-400">Gráficos para tus ventas.</p>
+                    <h2 className="text-xl font-bold">Gráficos</h2>
+                    <p className="text-main-gray">Gráficos para tus ventas.</p>
                   </div>
                   <Charts />
                 </div>              
@@ -104,8 +111,8 @@ export default function Home() {
               {activeTab === "summary" ? (
                 <div className="w-full animate-fade-in-y">
                   <div className="mb-4">
-                    <h2 className="text-xl font-bold text-white">Resumen</h2>
-                    <p className="text-gray-400">Resumen completo de todos los datos</p>
+                    <h2 className="text-xl font-bold">Resumen</h2>
+                    <p className="text-main-gray">Resumen completo de todos los datos</p>
                   </div>
                   <Summary />
                 </div>              
