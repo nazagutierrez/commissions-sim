@@ -8,13 +8,12 @@ import 'swiper/swiper-bundle.css';
 import { calculateCommission } from "../../utils/calculateCommissions";
 
 export default function CommissionSimulator() {
-  const { commissionsData, goalData, historicalData, setCommissionsData, setHistoricalData, setGoalData, setProspectData, setUpdateFlag} = useCommissionsContext(); 
+  const { commissionsData, goalData, setCommissionsData, setGoalData, setProspectData, setUpdateFlag} = useCommissionsContext(); 
   const [commission, setCommission] = useState("");
   const [customCommission, setCustomCommission] = useState("");
 
   const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setCommission(e.target.value);
-    // Opcional: limpiar el input si no está seleccionando "Otra"
     if (e.target.value !== "other") {
       setCustomCommission("");
     }
@@ -83,14 +82,6 @@ export default function CommissionSimulator() {
       const updatedProfitGoal = Number(profitGoal)
       calculateCommission({goalData, commissionsData, updatedProfitGoal, updatedCommissionsData, setGoalData, setProspectData, setCommissionsData, setUpdateFlag})
     }
-
-    // const newEntry = {
-    //   month: month as string,
-    //   sales: commission,
-    //   commission: commission,
-    // }
-
-    // setHistoricalData((prevData) => [...prevData, newEntry]);
   }
   
 
@@ -229,7 +220,7 @@ export default function CommissionSimulator() {
         </div>
         <button
           type="submit"
-          className="w-full py-2 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800"
+          className="w-full py-2 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-md transition-colors focus:outline-none cursor-pointer"
         >
           Calcular comisión
         </button>
@@ -252,7 +243,7 @@ export default function CommissionSimulator() {
             modules={[EffectCards]}
             className="h-52 w-72"
           >
-            <SwiperSlide className="bg-[#2e0000] rounded-md p-5">Primer paso ingresa tus datos</SwiperSlide>
+            <SwiperSlide className="bg-[#2e0000] rounded-md p-5">Primer paso ingresa tus datos ¡deslizá!</SwiperSlide>
             <SwiperSlide className="bg-blue-400 rounded-md p-5">Slide 2</SwiperSlide>
             <SwiperSlide className="bg-red-400 rounded-md p-5">Slide 3</SwiperSlide>
             <SwiperSlide className="bg-red-400 rounded-md p-5">Slide 4</SwiperSlide>

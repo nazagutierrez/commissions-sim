@@ -33,27 +33,20 @@ export default function Home() {
       usdValue: 0,
       usdTicket: 0,
     },
-    historicalData: [{
-      month: "",
-      sales: "",
-      commission: "",
-    }],
     
     setGoalData: () => {},
     setProspectData: () => {},
     setCommissionsData: () => {},
-    setHistoricalData: () => {},
     setUpdateFlag: () => {},
   };
 
-  const [historicalData, setHistoricalData] = useState<HistoricalData>([]);
   const [goalData, setGoalData] = useState<GoalData>(defaultCommissionsData.goalData);
   const [prospectData, setProspectData] = useState<ProspectData>(defaultCommissionsData.prospectData);
   const [commissionsData, setCommissionsData] = useState<CommissionsData>(defaultCommissionsData.commissionsData);
   const [updateFlag, setUpdateFlag] = useState(false);
 
   return (
-    <CommissionsContext.Provider value={{ goalData, prospectData, commissionsData, historicalData, updateFlag, setGoalData, setProspectData, setCommissionsData, setHistoricalData, setUpdateFlag }}>
+    <CommissionsContext.Provider value={{ goalData, prospectData, commissionsData, updateFlag, setGoalData, setProspectData, setCommissionsData, setUpdateFlag }}>
       <div className="min-h-screen bg-gray-900 text-gray-100 w-screen">
         <div className="container mx-auto py-10 px-4 w-full">
           <div className="w-full">

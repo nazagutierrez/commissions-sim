@@ -25,23 +25,14 @@ export type ProspectData = {
   minPresentationsWeek: number;
 };
 
-export type HistoricalData = {
-  month: string,
-  sales: FormDataEntryValue;
-  commission: FormDataEntryValue;
-}[];
-
-
 export type CommissionsContextType = {
   updateFlag: boolean;
   goalData: GoalData;
   prospectData: ProspectData;
   commissionsData: CommissionsData;
-  historicalData: HistoricalData;
 
   setGoalData: Dispatch<SetStateAction<GoalData>>;
   setProspectData: Dispatch<SetStateAction<ProspectData>>;
   setCommissionsData: Dispatch<SetStateAction<CommissionsData>>;
-  setHistoricalData: Dispatch<SetStateAction<HistoricalData>>;
   setUpdateFlag: Dispatch<SetStateAction<boolean>>;
 };
