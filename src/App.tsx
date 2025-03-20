@@ -7,6 +7,7 @@ import Summary from "./tabs/summary/summary"
 import chartWhite from "./assets/chartWhite.png"
 import homeWhite from "./assets/homeWhite.png"
 import summaryWhite from "./assets/summaryWhite.png"
+import { MadeBy } from "./components/MadeBy";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("commission")
@@ -121,27 +122,36 @@ export default function Home() {
             <div className="bg-bg-primary rounded-lg border border-primary-border/60 p-6 w-full">
               {activeTab === "commission" ? (
                 <div className="animate-fade-in-y">
-                  <div className="mb-4">
-                    <h2 className="text-xl font-medium">Comisiones</h2>
-                    <p className="text-main-gray">Calcular los porcentajes de venta de tus productos.</p>
+                  <div className="mb-4 flex items-center justify-between">
+                    <div>
+                      <h2 className="text-xl font-medium">Comisiones</h2>
+                      <p className="text-main-gray">Calcular los porcentajes de venta de tus productos.</p>
+                    </div>
+                    <MadeBy />
                   </div>
                   <CommissionSimulator />
                 </div>
               ) : ""}
               {activeTab === "charts" ? (
                 <div className="w-full animate-fade-in-y">
-                  <div className="mb-4">
-                    <h2 className="text-xl font-medium">Gráficos</h2>
-                    <p className="text-main-gray">Gráficos para tus ventas.</p>
+                  <div className="mb-4 flex items-center justify-between">
+                    <div>
+                      <h2 className="text-xl font-medium">Gráficos</h2>
+                      <p className="text-main-gray">Gráficos para tus ventas.</p>
+                    </div>
+                    <MadeBy />
                   </div>
                   <Charts />
                 </div>              
               ) : ""}
               {activeTab === "summary" ? (
                 <div className="w-full animate-fade-in-y">
-                  <div className="mb-4">
-                    <h2 className="text-xl font-medium">Resumen</h2>
-                    <p className="text-main-gray">Resumen completo de todos los datos</p>
+                  <div className="mb-4 flex items-center justify-between">
+                    <div>
+                      <h2 className="text-xl font-medium">Resumen</h2>
+                      <p className="text-main-gray">Resumen completo de todos los datos</p>
+                    </div>
+                    <MadeBy />
                   </div>
                   <Summary />
                 </div>              
