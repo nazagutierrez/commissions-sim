@@ -120,8 +120,8 @@ export default function ChartsView() {
               <BarChart
                 data={[
                   { name: "Nuevos prospectos", value: localProspect?.newDataToProspect },
-                  { name: "Presentaciones mensuales", value: localProspect?.minPresentationsMonth?.toFixed(0) },
-                  { name: "Presentaciones semanales", value: localProspect?.minPresentationsWeek }, 
+                  { name: "Presentaciones (mes)", value: localProspect?.minPresentationsMonth?.toFixed(0) },
+                  { name: "Presentaciones (sem)", value: localProspect?.minPresentationsWeek }, 
                 ]}
                 layout="vertical"
                 margin={{ top: 5, right: 30, left: 0, bottom: 5 }}
