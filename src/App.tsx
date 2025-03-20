@@ -90,7 +90,7 @@ export default function Home() {
               <div className="z-50 w-full bottom-0 fixed sm:hidden flex rounded-tr-lg rounded-tl-lg overflow-hidden">
                 <button
                   onClick={() => setActiveTab("commission")}
-                  className={`flex-1 cursor-pointer py-3 px-4 items-center justify-items-center transition-colors ${
+                  className={`flex-1 cursor-pointer py-6 px-4 items-center justify-items-center transition-colors ${
                     activeTab === "commission" ? "bg-primary" : "bg-bg-primary text-main-gray hover:bg-primary"
                   }`}
                 >
@@ -98,7 +98,7 @@ export default function Home() {
                 </button>
                 <button
                   onClick={() => setActiveTab("charts")}
-                  className={`flex-1 border-x-1 border-primary cursor-pointer py-3 px-4 items-center justify-items-center transition-colors ${
+                  className={`flex-1 border-x-1 border-primary cursor-pointer py-6 px-4 items-center justify-items-center transition-colors ${
                     activeTab === "charts" ? "bg-primary" : "bg-bg-primary text-main-gray hover:bg-primary"
                   }`}
                 >
@@ -106,7 +106,7 @@ export default function Home() {
                 </button>
                 <button
                   onClick={() => setActiveTab("summary")}
-                  className={`flex-1 cursor-pointer py-3 px-4 items-center justify-items-center transition-colors ${
+                  className={`flex-1 cursor-pointer py-6 px-4 items-center justify-items-center transition-colors ${
                     activeTab === "summary" ? "bg-primary" : "bg-bg-primary text-main-gray hover:bg-primary"
                   }`}
                 >
