@@ -110,8 +110,8 @@ export default function ChartsView() {
         {/* Datos a prospectar */}
         <div className="relative bg-bg-secondary rounded-lg p-4 border border-primary-border/60">
           <h1 className="absolute text-lg top-4 left-8">Datos a prospectar</h1>
-          <div className="h-56 mt-10 w-full flex items-center justify-center">
-            <ResponsiveContainer width="90%" height="100%">
+          <div className="h-56 mt-10 w-full items-center justify-center hidden sm:flex">
+            <ResponsiveContainer width="100%" height="100%">
               <BarChart
                 data={[
                   { name: "Nuevos prospectos", value: localProspect?.newDataToProspect },
@@ -122,8 +122,8 @@ export default function ChartsView() {
                 margin={{ top: 5, right: 30, left: 0, bottom: 5 }}
               >
                 <CartesianGrid strokeDasharray="3 3" stroke="#4b5563" /> 
-                <XAxis domain={[0, 90]} type="number" stroke="#9ca3af" />
-                <YAxis className="w-full" tickMargin={10} dataKey="name" type="category" stroke="#9ca3af" />
+                <XAxis domain={[0, 100]} type="number" stroke="#9ca3af" /> 
+                <YAxis width={120} tickMargin={10} dataKey="name" type="category" stroke="#9ca3af" />
                 <Tooltip
                   contentStyle={{ backgroundColor: "#1f2937", borderColor: "#4b5563" }}
                   labelStyle={{ color: "#e5e7eb" }}
@@ -131,6 +131,34 @@ export default function ChartsView() {
                 <Bar dataKey="value" fill="var(--color-chart-secondary)" />
               </BarChart>
             </ResponsiveContainer>
+          </div>
+          <div className="h-56 mt-10 w-full flex flex-col items-center justify-center sm:hidden">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={[
+                  { value: localProspect?.newDataToProspect },
+                  { value: localProspect?.minPresentationsMonth.toFixed(0) },
+                  { value: localProspect?.minPresentationsWeek }, 
+                ]} >
+                <CartesianGrid strokeDasharray="3 3" stroke="#4b5563" />
+                <XAxis 
+                  tickFormatter={val => val.slice(0, 3)}
+                  dataKey="month" 
+                  stroke="#ccc" 
+                />
+                <YAxis stroke="#ccc" domain={[0, 120]} />
+                <Tooltip
+                  formatter={(value) => [`${Number(value).toLocaleString()}`, ""]}
+                  contentStyle={{ backgroundColor: "#1f2937", borderColor: "#4b5563" }}
+                  labelStyle={{ color: "#e5e7eb" }}
+                />
+                <Bar dataKey="value" name="a" fill="var(--color-chart-secondary)" />
+              </BarChart>
+            </ResponsiveContainer>
+              <div className="flex text-center items-center justify-around w-full -mt-5">
+                <h2 className="ml-2 max-w-[25%] text-xs md:text-base">Nuevos prospectos</h2>
+                <h2 className="max-w-[25%] text-xs md:text-base">Presentaciones mensuales</h2>
+                <h2 className="max-w-[25%] text-xs md:text-base">Presentaciones semanales</h2>
+              </div>
           </div>
         </div>
       </div>
