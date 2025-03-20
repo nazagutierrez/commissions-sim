@@ -87,14 +87,15 @@ export default function ChartsView() {
                   ]}
                   cx="50%"
                   cy="50%"
+                  overflow="100"
                   innerRadius={60}
                   outerRadius={80}
                   paddingAngle={5}
                   dataKey="value"
-                  label={({ name, percent }) => `${name}: ${(percent * 100)?.toFixed(0)}%`}
+                  label={({ percent }) => `${(percent * 100)?.toFixed(0)}%`}
                   labelLine={false}
                 >
-                  <Cell fill="var(--color-primary)"/>
+                  <Cell width={100} overflow="visible" fill="var(--color-primary)"/>
                   <Cell fill="var(--color-chart-secondary)" />
                 </Pie>
                 <Tooltip
@@ -104,6 +105,10 @@ export default function ChartsView() {
                 />
               </PieChart>
             </ResponsiveContainer>
+          </div>
+          <div className="flex items-center justify-center gap-7 xl:gap-14 w-full text-center">
+            <h1 className="text-base text-primary">Producto {localCommission?.productValue?.toLocaleString()}</h1>
+            <h1 className="text-base text-chart-secondary">Ganancia neta {localGoal[localGoal.length - 1]?.netProfit?.toLocaleString()}</h1>
           </div>
         </div>
 
@@ -123,7 +128,7 @@ export default function ChartsView() {
               >
                 <CartesianGrid strokeDasharray="3 3" stroke="#4b5563" /> 
                 <XAxis domain={[0, 100]} type="number" stroke="#9ca3af" /> 
-                <YAxis width={120} tickMargin={10} dataKey="name" type="category" stroke="#9ca3af" />
+                <YAxis width={138} tickMargin={10} dataKey="name" type="category" stroke="#9ca3af" />
                 <Tooltip
                   contentStyle={{ backgroundColor: "#1f2937", borderColor: "#4b5563" }}
                   labelStyle={{ color: "#e5e7eb" }}
@@ -135,30 +140,25 @@ export default function ChartsView() {
           <div className="h-56 mt-10 w-full flex flex-col items-center justify-center sm:hidden">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={[
-                  { value: localProspect?.newDataToProspect },
-                  { value: localProspect?.minPresentationsMonth?.toFixed(0) },
-                  { value: localProspect?.minPresentationsWeek }, 
+                  {  name: "Nuevos prospectos", value: localProspect?.newDataToProspect },
+                  { name: "Presentaciones mensuales", value: localProspect?.minPresentationsMonth?.toFixed(0) },
+                  { name: "Presentaciones semanales", value: localProspect?.minPresentationsWeek }, 
                 ]} >
                 <CartesianGrid strokeDasharray="3 3" stroke="#4b5563" />
                 <XAxis 
                   tickFormatter={val => val?.slice(0, 3)}
-                  dataKey="month" 
+                  dataKey="name" 
                   stroke="#ccc" 
                 />
                 <YAxis stroke="#ccc" domain={[0, 120]} />
                 <Tooltip
                   formatter={(value) => [`${Number(value)?.toLocaleString()}`, ""]}
-                  contentStyle={{ backgroundColor: "#1f2937", borderColor: "#4b5563" }}
+                  contentStyle={{ fontSize: "12px", backgroundColor: "#1f2937", borderColor: "#4b5563" }}
                   labelStyle={{ color: "#e5e7eb" }}
                 />
-                <Bar dataKey="value" name="a" fill="var(--color-chart-secondary)" />
+                <Bar dataKey="value" name="Prospectos" fill="var(--color-chart-secondary)" />
               </BarChart>
             </ResponsiveContainer>
-              <div className="flex text-center items-center justify-around w-full -mt-5">
-                <h2 className="ml-2 max-w-[25%] text-xs md:text-base">Nuevos prospectos</h2>
-                <h2 className="max-w-[25%] text-xs md:text-base">Presentaciones mensuales</h2>
-                <h2 className="max-w-[25%] text-xs md:text-base">Presentaciones semanales</h2>
-              </div>
           </div>
         </div>
       </div>

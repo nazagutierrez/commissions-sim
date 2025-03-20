@@ -1,6 +1,6 @@
 export const MadeBy = () => {
   return (
-    <h1 className="text-main-gray">
+    <h1 className="text-main-gray text-center">
       Hecho por{" "}
       <span>
         <a
