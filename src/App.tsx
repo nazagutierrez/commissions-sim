@@ -67,6 +67,7 @@ export default function Home() {
               {/* Navbar para web */}
               <div className="flex-wrap w-[400px] hidden sm:flex rounded-lg overflow-hidden border border-primary-border/70">
                 <button
+                  type="button"
                   onClick={() => setActiveTab("commission")}
                   className={`flex-1 cursor-pointer py-3 px-4 text-center transition-colors ${
                     activeTab === "commission" ? "bg-primary" : "bg-bg-primary text-main-gray hover:bg-primary"
@@ -75,6 +76,7 @@ export default function Home() {
                   Comisiones
                 </button>
                 <button
+                  type="button"
                   onClick={() => setActiveTab("charts")}
                   className={`flex-1 cursor-pointer py-3 px-4 text-center transition-colors ${
                     activeTab === "charts" ? "bg-primary" : "bg-bg-primary text-main-gray hover:bg-primary"
@@ -83,6 +85,7 @@ export default function Home() {
                   Gráficos
                 </button>
                 <button
+                  type="button"
                   onClick={() => setActiveTab("summary")}
                   className={`flex-1 cursor-pointer py-3 px-4 text-center transition-colors ${
                     activeTab === "summary" ? "bg-primary" : "bg-bg-primary text-main-gray hover:bg-primary"
@@ -95,6 +98,7 @@ export default function Home() {
               {/* Navbar para mobile */}
               <div className="z-50 w-full bottom-0 fixed sm:hidden flex rounded-tr-lg rounded-tl-lg overflow-hidden">
                 <button
+                  type="button"
                   onClick={() => setActiveTab("commission")}
                   className={`flex flex-1 cursor-pointer py-6 px-4 items-center justify-center transition-colors ${
                     activeTab === "commission" ? "bg-primary" : "bg-bg-primary text-main-gray hover:bg-primary"
@@ -103,6 +107,7 @@ export default function Home() {
                   <img className="w-5 h-5" src={homeWhite} alt="Icono de grafico" />
                 </button>
                 <button
+                  type="button"
                   onClick={() => setActiveTab("charts")}
                   className={`flex flex-1 border-x-1 border-primary cursor-pointer py-6 px-4 items-center justify-center transition-colors ${
                     activeTab === "charts" ? "bg-primary" : "bg-bg-primary text-main-gray hover:bg-primary"
@@ -111,6 +116,7 @@ export default function Home() {
                   <img className="w-5 h-5" src={chartWhite} alt="Icono de grafico" />
                 </button>
                 <button
+                  type="button"
                   onClick={() => setActiveTab("summary")}
                   className={`flex flex-1 cursor-pointer py-6 px-4 items-center justify-center transition-colors ${
                     activeTab === "summary" ? "bg-primary" : "bg-bg-primary text-main-gray hover:bg-primary"

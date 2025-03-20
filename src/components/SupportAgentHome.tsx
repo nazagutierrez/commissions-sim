@@ -60,7 +60,7 @@ export const SupportAgentHome = () => {
             <p>¡Espero que te guste!</p>
           </div>
         </SwiperSlide>
-        <img className="opacity-65 w-6 justify-self-center mt-2 animate-drag-cursor" src={dragCursor} />
+        <img className="opacity-65 w-6 justify-self-center mt-2 animate-drag-cursor" src={dragCursor} alt="cursor animado" />
       </Swiper>
     </div>
   );
