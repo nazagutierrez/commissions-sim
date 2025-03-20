@@ -111,19 +111,19 @@ export default function Summary() {
             Prospectar datos
           </h2>
           <div className="grid grid-cols-1 grid-rows-3 gap-4 w-full">
-            <div className="bg-primary/20 py-4 px-4 rounded-lg block text-center xl:flex gap-3 items-center">
+            <div className="bg-primary/20 py-4.5 px-4 rounded-lg block text-center xl:flex gap-3 items-center">
               <p className="text-main-color text-sm">Nuevos datos a prospectar</p>
               <p className="text-md font-bold">
                 {localProspect?.newDataToProspect || 0}
               </p>
             </div>
-            <div className="bg-primary/20 py-4 px-4 rounded-lg block text-center xl:flex gap-3 items-center">
+            <div className="bg-primary/20 py-4.5 px-4 rounded-lg block text-center xl:flex gap-3 items-center">
               <p className="text-main-color text-sm">Min. Presentaciónes (Mes)</p>
               <p className="text-md font-bold">
                 {localProspect?.minPresentationsMonth?.toFixed(0) || 0}
               </p>
             </div>
-            <div className="bg-primary/20 py-4 px-4 rounded-lg block text-center xl:flex gap-3 items-center">
+            <div className="bg-primary/20 py-4.5 px-4 rounded-lg block text-center xl:flex gap-3 items-center">
               <p className="text-main-color text-sm">
                 Min. Presentaciónes (Semana)
               </p>
