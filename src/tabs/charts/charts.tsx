@@ -41,7 +41,7 @@ export default function ChartsView() {
   }, [updateFlag]);
 
   return (
-    <div className="relative space-y-4 h-[70vh]">
+    <div className="relative space-y-4 h-full">
       <div className={`${localGoal.length > 0 ? "hidden" : "" } flex backdrop-blur-xs items-center justify-center z-50 mb-0 absolute inset-0 self-center justify-self-center w-full h-full bg-bg-secondary/40 rounded-lg overflow-hidden`}>
         <h1 className="text-3xl">¡Carga tus datos primero!</h1>
       </div>
@@ -73,7 +73,7 @@ export default function ChartsView() {
 
       {/* Ganancia neta */}
       <div className="grid grid-cols-1  md:grid-cols-2 gap-6">
-        <div className="relative bg-bg-secondary rounded-lg p-4 content-center border border-primary-border/60">
+        <div className="relative xl:py-0 py-10 bg-bg-secondary rounded-lg p-4 content-center border border-primary-border/60">
           <h1 className="absolute text-lg top-4 left-8">Ganancia neta</h1>
           <div className="h-52 w-full">
             <ResponsiveContainer width="100%" height="100%">

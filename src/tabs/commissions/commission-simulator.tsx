@@ -83,9 +83,9 @@ export default function CommissionSimulator() {
   
 
   return (
-    <div className="flex w-full justify-center items-center gap-32 h-[70vh]">
-      <form onSubmit={onSubmit} className="space-y-6 my-5 w-1/3">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="flex-col-reverse xl:flex-row flex w-full justify-center items-center gap-14 xl:gap-32 h-full py-[50.5px]">
+      <form onSubmit={onSubmit} className="space-y-6 my-5 xl:w-1/3 flex flex-col items-center justify-center w-full ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
           <FormInput text="Ingresa tu nombre" label="Nombre de Socio/a" name="name" type="text" placeholder="Ingresa tu nombre" />
           <FormInput text="Ingresa el mes" label="Mes" name="month" type="text" placeholder="Ingresa el mes" />
           <FormInput text="Ingresa el ticket promedio en USD" label="Mi ticket promedio en USD" name="usdTicket" type="number" placeholder="1100" />

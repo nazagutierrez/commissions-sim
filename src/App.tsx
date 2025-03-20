@@ -54,11 +54,11 @@ export default function Home() {
 
   return (
     <CommissionsContext.Provider value={{ goalData, prospectData, commissionsData, updateFlag, setGoalData, setProspectData, setCommissionsData, setUpdateFlag }}>
-      <div className="min-h-screen bg-bg text-main-white w-screen">
-        <div className="container mx-auto py-10 px-4 w-full">
+      <div className="min-h-screen bg-bg text-main-white w-full">
+        <div className="container mx-auto pb-10 pt-9 px-4 w-full">
           <div className="w-full">
-            <div className="flex items-center justify-between mb-8 gap-8">
-              <div className="w-[400px] flex rounded-lg overflow-hidden border border-primary-border">
+            <div className="flex-col xl:flex-row flex items-center justify-around xl:justify-between mb-8 gap-8">
+              <div className="w-full md:w-[400px] flex rounded-lg overflow-hidden border border-primary-border/70">
                 <button
                   onClick={() => setActiveTab("commission")}
                   className={`flex-1 cursor-pointer py-3 px-4 text-center transition-colors ${
@@ -84,12 +84,12 @@ export default function Home() {
                   Resumen
                 </button>
               </div>
-              <h1 className="text-xl bg-bg-primary px-5 py-1 rounded-lg border border-b-primary-border border-bg-primary">
+              <h1 className="text-xl text-center bg-bg-primary px-5 py-1 rounded-lg border border-b-primary-border border-bg-primary">
                 Asistente de comisiones | Sinergia Creativa
               </h1>
             </div>
 
-            <div className="bg-bg-primary rounded-lg border border-primary-border p-6 w-full">
+            <div className="bg-bg-primary rounded-lg border border-primary-border/60 p-6 w-full">
               {activeTab === "commission" ? (
                 <div className="animate-fade-in-y">
                   <div className="mb-4">
