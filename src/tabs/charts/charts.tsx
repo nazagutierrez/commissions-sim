@@ -43,7 +43,7 @@ export default function ChartsView() {
   }, [updateFlag]);
 
   return (
-    <div className="relative space-y-4 h-full">
+    <section className="relative space-y-4 h-full">
 
       {/* Advertencia de carga de datos */}
       <div className={`${localGoal.length > 0 ? "hidden" : "" } flex backdrop-blur-xs items-center justify-center text-center z-40 mb-0 absolute inset-0 self-center justify-self-center w-full h-full bg-bg-secondary/40 rounded-lg overflow-hidden`}>
@@ -166,7 +166,7 @@ export default function ChartsView() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

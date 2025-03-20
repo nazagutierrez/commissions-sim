@@ -56,7 +56,7 @@ export const SupportAgentHome = () => {
         <SwiperSlide>
           <div className="bg-[radial-gradient(ellipse_80%_50%_at_50%_110%,#ad434c_0%,var(--color-bg-secondary)_50%)] rounded-lg h-full text-pretty text-center flex flex-col items-center justify-around py-4 px-3 sm:p-5 border border-bg-secondary border-b-[#ad434c]">
             <p>Y Listo!</p>
-            <p>Puedes empezar a probar la aplicación.</p>
+            <p>Podés empezar a probar la aplicación.</p>
             <p>¡Espero que te guste!</p>
           </div>
         </SwiperSlide>

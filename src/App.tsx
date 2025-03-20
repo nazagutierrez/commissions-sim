@@ -60,7 +60,7 @@ export default function Home() {
 
   return (
     <CommissionsContext.Provider value={{ goalData, prospectData, commissionsData, updateFlag, setGoalData, setProspectData, setCommissionsData, setUpdateFlag }}>
-      <div className="min-h-screen bg-bg text-main-white w-full">
+      <main className="min-h-screen bg-bg text-main-white w-full">
         <div className="container mx-auto pb-28 md:pb-10 pt-9 px-4 w-full">
           <div className="w-full">
             <div className="flex-col xl:flex-row flex items-center justify-around xl:justify-between mb-8 gap-8">
@@ -174,7 +174,7 @@ export default function Home() {
             <MadeBy />
           </div>
         </div>
-      </div>
+      </main>
     </CommissionsContext.Provider>
   )
 }

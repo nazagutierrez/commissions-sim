@@ -28,7 +28,7 @@ export default function Summary() {
 
   return (
     // Mostramos todos los datos
-    <div className="h-full flex flex-col items-center justify-around gap-14 py-[44px]">
+    <section className="h-full flex flex-col items-center justify-around gap-14 py-[44px]">
         <div className="bg-bg-secondary rounded-lg p-5 w-full ">
           <h2 className="text-lg xl:text-xxl font-medium mb-4 text-center xl:text-start">
             Datos de entrada
@@ -163,6 +163,6 @@ export default function Summary() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

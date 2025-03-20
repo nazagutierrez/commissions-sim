@@ -1,10 +1,11 @@
 export const FormInput = ({label, name, type, placeholder, text}: { label: string, name: string, type: string, placeholder: string, text: string }) => {
   return (
     <div>
-      <label className="block text-sm font-medium text-main-white mb-1">
+      <label htmlFor={name} className="block text-sm font-medium text-main-white mb-1">
         {label}
       </label>
       <input
+        id={name}
         min={0}
         max={100000000}
         required
