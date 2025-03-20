@@ -24,50 +24,50 @@ export default function Summary() {
   
 
   return (
-    <div className="h-full flex flex-col items-center justify-around gap-10 py-[36px]">
-        <div className="bg-bg-secondary rounded-lg p-6 w-full ">
+    <div className="h-full flex flex-col items-center justify-around gap-14 py-[44px]">
+        <div className="bg-bg-secondary rounded-lg p-8 w-full ">
           <h2 className="text-lg xl:text-xxl font-bold mb-4 text-center xl:text-start">
             Datos de entrada
           </h2>
           <div className="grid center grid-cols-1 md:grid-cols-3 xl:grid-cols-7 grid-rows-3 xl:grid-rows-1 gap-4 text-center">
-            <div className="bg-primary/20 p-4 rounded-lg ">
-              <p className="text-main-color text-sm">Nombre</p>
+            <div className="bg-primary/20 py-6 px-4 rounded-lg ">
+              <p className="text-main-color text-md">Nombre</p>
               <p className="text-xl font-bold">
                 {localCommission?.name || "Vacío"}
               </p>
             </div>
-            <div className="bg-primary/20 p-4 rounded-lg">
-              <p className="text-main-color text-sm">Mes</p>
+            <div className="bg-primary/20 py-6 px-4 rounded-lg">
+              <p className="text-main-color text-md">Mes</p>
               <p className="text-xl font-bold self-center">
                 {localCommission?.month || "Vacío"}
               </p>
             </div>
-            <div className="bg-primary/20 p-4 rounded-lg">
-              <p className="text-main-color text-sm">Producto</p>
+            <div className="bg-primary/20 py-6 px-4 rounded-lg">
+              <p className="text-main-color text-md">Producto</p>
               <p className="text-xl font-bold">
                 {localCommission?.product || "Vacío"}
               </p>
             </div>
-            <div className="bg-primary/20 p-4 rounded-lg">
-              <p className="text-main-color text-sm">Valor del producto</p>
+            <div className="bg-primary/20 py-6 px-4 rounded-lg">
+              <p className="text-main-color text-md">Valor del producto</p>
               <p className="text-xl font-bold">
                 ${localCommission?.productValue?.toLocaleString() || 0}
               </p>
             </div>
-            <div className="bg-primary/20 p-4 rounded-lg">
-              <p className="text-main-color text-sm">Comisión</p>
+            <div className="bg-primary/20 py-6 px-4 rounded-lg">
+              <p className="text-main-color text-md">Comisión</p>
               <p className="text-xl font-bold">
                 %{localCommission?.commission || 0}
               </p>
             </div>
-            <div className="bg-primary/20 p-4 rounded-lg">
-              <p className="text-main-color text-sm">Valor USD</p>
+            <div className="bg-primary/20 py-6 px-4 rounded-lg">
+              <p className="text-main-color text-md">Valor USD</p>
               <p className="text-xl font-bold">
                 ${localCommission?.usdValue?.toLocaleString() || 0}
               </p>
             </div>
-            <div className="bg-primary/20 p-4 rounded-lg">
-              <p className="text-main-color text-sm">Ticket USD</p>
+            <div className="bg-primary/20 py-6 px-4 rounded-lg">
+              <p className="text-main-color text-md">Ticket USD</p>
               <p className="text-xl font-bold">
                 ${localCommission?.usdTicket?.toLocaleString() || 0}
               </p>
@@ -78,7 +78,7 @@ export default function Summary() {
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-center justify-around gap-10 w-full">
         <div className="bg-bg-secondary rounded-lg p-6 h-fit">
           <h2 className="text-lg xl:text-xxl font-bold mb-4 text-center xl:text-start">Objetivos</h2>
-          <div className="grid grid-cols-1 grid-rows-4 xxl:grid-rows-3 gap-4 h-full">
+          <div className="grid grid-cols-1 grid-rows-4 xxl:grid-rows-3 gap-4">
             <div className="bg-primary/20 p-4 rounded-lg col-span-2 block text-center xl:flex items-center gap-3 ">
               <p className="text-main-color text-sm">Ganancia neta</p>
               <p className="text-xl font-bold underline decoration-green-400 decoration-1 underline-offset-4">
@@ -111,19 +111,19 @@ export default function Summary() {
             Prospectar datos
           </h2>
           <div className="grid grid-cols-1 grid-rows-3 gap-4 w-full">
-            <div className="bg-primary/20 py-5 px-4 rounded-lg block text-center xl:flex gap-3 items-center">
+            <div className="bg-primary/20 py-4 px-4 rounded-lg block text-center xl:flex gap-3 items-center">
               <p className="text-main-color text-sm">Nuevos datos a prospectar</p>
               <p className="text-xl font-bold">
                 {localProspect?.newDataToProspect || 0}
               </p>
             </div>
-            <div className="bg-primary/20 py-5 px-4 rounded-lg block text-center xl:flex gap-3 items-center">
+            <div className="bg-primary/20 py-4 px-4 rounded-lg block text-center xl:flex gap-3 items-center">
               <p className="text-main-color text-sm">Min. Presentaciónes (Mes)</p>
               <p className="text-xl font-bold">
                 {localProspect?.minPresentationsMonth?.toFixed(0) || 0}
               </p>
             </div>
-            <div className="bg-primary/20 py-5 px-4 rounded-lg block text-center xl:flex gap-3 items-center">
+            <div className="bg-primary/20 py-4 px-4 rounded-lg block text-center xl:flex gap-3 items-center">
               <p className="text-main-color text-sm">
                 Min. Presentaciónes (Semana)
               </p>

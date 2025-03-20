@@ -42,7 +42,9 @@ export default function ChartsView() {
 
   return (
     <div className="relative space-y-4 h-full">
-      <div className={`${localGoal.length > 0 ? "hidden" : "" } flex backdrop-blur-xs items-center justify-center z-50 mb-0 absolute inset-0 self-center justify-self-center w-full h-full bg-bg-secondary/40 rounded-lg overflow-hidden`}>
+
+      {/* Advertencia de carga de datos */}
+      <div className={`${localGoal.length > 0 ? "hidden" : "" } flex backdrop-blur-xs items-center justify-center text-center z-40 mb-0 absolute inset-0 self-center justify-self-center w-full h-full bg-bg-secondary/40 rounded-lg overflow-hidden`}>
         <h1 className="text-3xl">¡Carga tus datos primero!</h1>
       </div>
 
@@ -121,7 +123,7 @@ export default function ChartsView() {
               >
                 <CartesianGrid strokeDasharray="3 3" stroke="#4b5563" /> 
                 <XAxis domain={[0, 90]} type="number" stroke="#9ca3af" />
-                <YAxis width={120} tickMargin={10} dataKey="name" type="category" stroke="#9ca3af" />
+                <YAxis className="w-full" tickMargin={10} dataKey="name" type="category" stroke="#9ca3af" />
                 <Tooltip
                   contentStyle={{ backgroundColor: "#1f2937", borderColor: "#4b5563" }}
                   labelStyle={{ color: "#e5e7eb" }}
