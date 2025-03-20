@@ -133,7 +133,9 @@ export default function Home() {
                       <h2 className="text-xl font-medium">Comisiones</h2>
                       <p className="text-main-gray">Calcular los porcentajes de venta de tus productos.</p>
                     </div>
-                    <MadeBy />
+                    <div className="hidden md:block">
+                      <MadeBy />
+                    </div>
                   </div>
                   <CommissionSimulator />
                 </div>
@@ -145,7 +147,9 @@ export default function Home() {
                       <h2 className="text-xl font-medium">Gráficos</h2>
                       <p className="text-main-gray">Gráficos para tus ventas.</p>
                     </div>
-                    <MadeBy />
+                    <div className="hidden md:block">
+                      <MadeBy />
+                    </div>
                   </div>
                   <Charts />
                 </div>              
@@ -157,12 +161,17 @@ export default function Home() {
                       <h2 className="text-xl font-medium">Resumen</h2>
                       <p className="text-main-gray">Resumen completo de todos los datos</p>
                     </div>
-                    <MadeBy />
+                    <div className="hidden md:block">
+                      <MadeBy />
+                    </div>
                   </div>
                   <Summary />
                 </div>              
               ) : ""}
             </div>
+          </div>
+          <div className="block mt-10 md:mt-0 md:hidden">
+            <MadeBy />
           </div>
         </div>
       </div>
