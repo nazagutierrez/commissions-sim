@@ -1,13 +1,14 @@
-import { useEffect, useState } from "react"
+import React, { Suspense, useEffect, useState } from "react"
 import CommissionSimulator from "./tabs/commissions/commission-simulator"
 import { CommissionsContext } from "./context/commissionsContext"
 import { CommissionsContextType, CommissionsData, GoalData, ProspectData } from "./types/types";
-import Charts from "./tabs/charts/charts"
 import Summary from "./tabs/summary/summary"
 import chartWhite from "./assets/chartWhite.png"
 import homeWhite from "./assets/homeWhite.png"
 import summaryWhite from "./assets/summaryWhite.png"
 import { MadeBy } from "./components/MadeBy";
+const Charts = React.lazy(() => import("./tabs/charts/charts"));
+
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("commission")
@@ -133,7 +134,7 @@ export default function Home() {
             {/* Contenido del componente */}
             <div className="bg-bg-primary rounded-lg border border-primary-border/60 p-6 w-full">
               {activeTab === "commission" ? (
-                <div className="animate-fade-in-y">
+                <div className="animate-fade-in-y min-h-[77.5vh]">
                   <div className="mb-4 flex items-center justify-between">
                     <div>
                       <h2 className="text-xl font-medium">Comisiones</h2>
@@ -157,7 +158,9 @@ export default function Home() {
                       <MadeBy />
                     </div>
                   </div>
-                  <Charts />
+                  <Suspense fallback={<div className="min-h-[70.2vh] flex items-center justify-center">Loading...</div>}>
+                    <Charts />
+                  </Suspense>
                 </div>              
               ) : ""}
               {activeTab === "summary" ? (
