@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+html {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 @theme {
     /* Color principal */
     --color-primary: #095b92;
@@ -22,6 +29,9 @@
     --gradient-custom: radial-gradient(ellipse 70% 90% at 50% 100%,#051f49,transparent 60%);
     --animate-fade-in-y: fade-in-y 0.3s ease-out;
     --animate-drag-cursor: drag-cursor 2s ease-out infinite;
+
+    /* Breakpoints */
+    --breakpoint-xxl: 1536px;
 
     @keyframes fade-in-y {
       0% {
