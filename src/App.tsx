@@ -4,6 +4,9 @@ import { CommissionsContext } from "./context/commissionsContext"
 import { CommissionsContextType, CommissionsData, GoalData, ProspectData } from "./types/types";
 import Charts from "./tabs/charts/charts"
 import Summary from "./tabs/summary/summary"
+import chartWhite from "./assets/chartWhite.png"
+import homeWhite from "./assets/homeWhite.png"
+import summaryWhite from "./assets/summaryWhite.png"
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("commission")
@@ -87,27 +90,27 @@ export default function Home() {
               <div className="z-50 w-full bottom-0 fixed sm:hidden flex rounded-tr-lg rounded-tl-lg overflow-hidden">
                 <button
                   onClick={() => setActiveTab("commission")}
-                  className={`flex-1 cursor-pointer py-3 px-4 text-center transition-colors ${
+                  className={`flex-1 cursor-pointer py-3 px-4 items-center justify-items-center transition-colors ${
                     activeTab === "commission" ? "bg-primary" : "bg-bg-primary text-main-gray hover:bg-primary"
                   }`}
                 >
-                  Comisiones
+                  <img className="w-5 h-5" src={homeWhite} alt="Icono de grafico" />
                 </button>
                 <button
                   onClick={() => setActiveTab("charts")}
-                  className={`flex-1 border-x-1 border-main-color cursor-pointer py-3 px-4 text-center transition-colors ${
+                  className={`flex-1 border-x-1 border-primary cursor-pointer py-3 px-4 items-center justify-items-center transition-colors ${
                     activeTab === "charts" ? "bg-primary" : "bg-bg-primary text-main-gray hover:bg-primary"
                   }`}
                 >
-                  Gráficos
+                  <img className="w-5 h-5" src={chartWhite} alt="Icono de grafico" />
                 </button>
                 <button
                   onClick={() => setActiveTab("summary")}
-                  className={`flex-1 cursor-pointer py-3 px-4 text-center transition-colors ${
+                  className={`flex-1 cursor-pointer py-3 px-4 items-center justify-items-center transition-colors ${
                     activeTab === "summary" ? "bg-primary" : "bg-bg-primary text-main-gray hover:bg-primary"
                   }`}
                 >
-                  Resumen
+                  <img className="w-5 h-5" src={summaryWhite} alt="Icono de grafico" />
                 </button>
               </div>
               <h1 className="text-xl text-center bg-bg-primary px-5 py-1 rounded-lg border border-b-primary-border border-bg-primary">
