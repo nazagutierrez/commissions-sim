@@ -5,6 +5,8 @@ export const FormInput = ({label, name, type, placeholder, text}: { label: strin
         {label}
       </label>
       <input
+        min={0}
+        max={100000000}
         required
         name={name}
         type={type}
