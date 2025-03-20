@@ -12,11 +12,11 @@ La primera vista permite ingresar los datos de una manera sencilla y también se
 
 ### 2. Vista de resumen
 
-Luego de ingresar los datos y calcular las comisiónes automaticamente es redirigido a la vista resumen, donde se pueden ver todos los datos ya calculados.
+Luego de ingresar los datos y calcular las comisiónes automáticamente es redirigido a la vista resumen, donde se pueden ver todos los datos ya calculados.
 
 ### 3. Vista de gráficos
 
-Además, agregue una vista de graficos, cada simulacion que hagas se guarda en el LocalStorage, de esta manera podes llevar un registro de manera visual.
+Además, agregué una vista de gráficos, cada simulación que hagas se guarda en el LocalStorage, de esta manera podés llevar un registro de manera visual.
 
 
 ## Tecnologías
@@ -27,7 +27,7 @@ Además, agregue una vista de graficos, cada simulacion que hagas se guarda en e
 
 ## Cosas a mejorar
 
-Se le debería agregar un backend y una validación al formulario para aumentar su seguridad, también un sistema de login y admin si es que se quiere, se le podrian cambiar los gráficos para mostrar la información que se quiera.
+Se le debería agregar un backend y una validación al formulario para aumentar su seguridad, también un sistema de login y admin si es que se quiere y se le podrían cambiar los gráficos para mostrar la información que se quiera.
 
 
 ## Datos
