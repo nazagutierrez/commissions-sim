@@ -58,7 +58,7 @@ export default function Home() {
         <div className="container mx-auto pb-10 pt-9 px-4 w-full">
           <div className="w-full">
             <div className="flex-col xl:flex-row flex items-center justify-around xl:justify-between mb-8 gap-8">
-              <div className="w-full md:w-[400px] flex rounded-lg overflow-hidden border border-primary-border/70">
+              <div className="flex-wrap w-[400px] hidden sm:flex rounded-lg overflow-hidden border border-primary-border/70">
                 <button
                   onClick={() => setActiveTab("commission")}
                   className={`flex-1 cursor-pointer py-3 px-4 text-center transition-colors ${
@@ -70,6 +70,32 @@ export default function Home() {
                 <button
                   onClick={() => setActiveTab("charts")}
                   className={`flex-1 cursor-pointer py-3 px-4 text-center transition-colors ${
+                    activeTab === "charts" ? "bg-primary" : "bg-bg-primary text-main-gray hover:bg-primary"
+                  }`}
+                >
+                  Gráficos
+                </button>
+                <button
+                  onClick={() => setActiveTab("summary")}
+                  className={`flex-1 cursor-pointer py-3 px-4 text-center transition-colors ${
+                    activeTab === "summary" ? "bg-primary" : "bg-bg-primary text-main-gray hover:bg-primary"
+                  }`}
+                >
+                  Resumen
+                </button>
+              </div>
+              <div className="z-50 w-full bottom-0 fixed sm:hidden flex rounded-tr-lg rounded-tl-lg overflow-hidden">
+                <button
+                  onClick={() => setActiveTab("commission")}
+                  className={`flex-1 cursor-pointer py-3 px-4 text-center transition-colors ${
+                    activeTab === "commission" ? "bg-primary" : "bg-bg-primary text-main-gray hover:bg-primary"
+                  }`}
+                >
+                  Comisiones
+                </button>
+                <button
+                  onClick={() => setActiveTab("charts")}
+                  className={`flex-1 border-x-1 border-main-color cursor-pointer py-3 px-4 text-center transition-colors ${
                     activeTab === "charts" ? "bg-primary" : "bg-bg-primary text-main-gray hover:bg-primary"
                   }`}
                 >

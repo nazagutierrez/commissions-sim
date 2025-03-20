@@ -29,7 +29,7 @@ export default function Summary() {
           <h2 className="text-lg xl:text-xxl font-bold mb-4 text-center xl:text-start">
             Datos de entrada
           </h2>
-          <div className="grid center grid-cols-3 xl:grid-cols-7 grid-rows-3 xl:grid-rows-1 gap-4 text-center">
+          <div className="grid center grid-cols-1 md:grid-cols-3 xl:grid-cols-7 grid-rows-3 xl:grid-rows-1 gap-4 text-center">
             <div className="bg-primary/20 p-4 rounded-lg ">
               <p className="text-main-color text-sm">Nombre</p>
               <p className="text-xl font-bold">
@@ -106,24 +106,24 @@ export default function Summary() {
           </div>
         </div>
 
-        <div className="bg-bg-secondary rounded-lg p-6">
+        <div className="bg-bg-secondary rounded-lg p-6 h-full items-start flex flex-col">
           <h2 className="text-lg xl:text-xxl font-bold mb-4 text-center xl:text-start">
             Prospectar datos
           </h2>
-          <div className="grid grid-cols-1 grid-rows-3 gap-4">
-            <div className="bg-primary/20 p-4 rounded-lg block text-center xl:flex gap-3 items-center">
+          <div className="grid grid-cols-1 grid-rows-3 gap-4 w-full">
+            <div className="bg-primary/20 py-5 px-4 rounded-lg block text-center xl:flex gap-3 items-center">
               <p className="text-main-color text-sm">Nuevos datos a prospectar</p>
               <p className="text-xl font-bold">
                 {localProspect?.newDataToProspect || 0}
               </p>
             </div>
-            <div className="bg-primary/20 p-4 rounded-lg block text-center xl:flex gap-3 items-center">
+            <div className="bg-primary/20 py-5 px-4 rounded-lg block text-center xl:flex gap-3 items-center">
               <p className="text-main-color text-sm">Min. Presentaciónes (Mes)</p>
               <p className="text-xl font-bold">
                 {localProspect?.minPresentationsMonth?.toFixed(0) || 0}
               </p>
             </div>
-            <div className="bg-primary/20 p-4 rounded-lg block text-center xl:flex gap-3 items-center">
+            <div className="bg-primary/20 py-5 px-4 rounded-lg block text-center xl:flex gap-3 items-center">
               <p className="text-main-color text-sm">
                 Min. Presentaciónes (Semana)
               </p>
@@ -134,23 +134,24 @@ export default function Summary() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-around gap-4">
-          <div className="bg-bg-secondary rounded-lg p-6 w-full block text-center xl:flex items-center justify-center">
-            <h2 className="text-lg xl:text-xxl font-bold xl:mb-0 mb-4 text-center w-1/2">
+        <div className="flex flex-col items-center justify-around gap-4 h-full bg-bg-secondary rounded-lg">
+          <div className="p-6 w-full block text-center xl:flex items-center justify-center">
+            <h2 className="text-lg xl:text-xxl font-bold xl:mb-0 mb-4 text-center xl:w-1/2">
               Objetivo principal
             </h2>
-            <div className="bg-primary/20 p-2 rounded-lg w-1/2 ">
+            <div className="bg-primary/20 p-2 rounded-lg xl:w-1/2 ">
               <p className="text-main-color text-sm">Objetivo a vender</p>
               <p className="text-xl font-bold">
                 ${localGoal?.profitGoal?.toLocaleString() || 0}
               </p>
             </div>
           </div>
+          <div className="h-1 w-4/5 bg-primary/30"></div>
           <div className="bg-bg-secondary rounded-lg p-6 w-full block text-center xl:flex items-center gap-3">
-            <h2 className="text-lg xl:text-xxl w-1/2 font-bold xl:mb-0 mb-4 text-center">
+            <h2 className="text-lg xl:text-xxl xl:w-1/2 font-bold xl:mb-0 mb-4 text-center">
               Capacitación mínima entre campus virtual y oficina
             </h2>
-            <div className="bg-primary/20 p-2 rounded-lg w-1/2">
+            <div className="bg-primary/20 p-2 rounded-lg xl:w-1/2">
               <p className="text-xl font-bold">
                 20Hs semanales
               </p>
