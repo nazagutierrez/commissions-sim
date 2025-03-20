@@ -27,32 +27,32 @@ export const SupportAgentHome = () => {
         className="sm:h-52 sm:w-72 h-32 w-48 sm:text-base text-sm"
       >
         <SwiperSlide>
-          <div className="bg-[radial-gradient(ellipse_60%_100%_at_90%_100%,var(--color-primary)_0%,var(--color-bg-secondary)_50%)] rounded-lg h-full gap-2 text-pretty text-center flex flex-col items-center justify-between p-2 sm:p-5 border border-bg-secondary border-b-primary/50">
+          <div className="bg-[radial-gradient(ellipse_80%_50%_at_50%_110%,var(--color-primary)_0%,var(--color-bg-secondary)_50%)] rounded-lg h-full gap-2 text-pretty text-center flex flex-col items-center justify-between p-2 sm:p-5 border border-bg-secondary border-b-primary/50">
             <p>Para empezar ingresá tus datos y luego hacé click en calcular comisión.</p>
             <p>Cada input tiene una pequeña ayuda.</p>
             <h2>¡Deslizá!</h2>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-[radial-gradient(ellipse_60%_100%_at_90%_100%,#4a29a5_0%,var(--color-bg-secondary)_50%)] rounded-lg h-full text-pretty text-center flex flex-col items-center justify-around p-2 sm:p-5 border border-bg-secondary border-b-[#4a29a5]">
+          <div className="bg-[radial-gradient(ellipse_80%_50%_at_50%_110%,#4a29a5_0%,var(--color-bg-secondary)_50%)] rounded-lg h-full text-pretty text-center flex flex-col items-center justify-around p-2 sm:p-5 border border-bg-secondary border-b-[#4a29a5]">
             <p>Una vez cargado tus datos te redigirá a la sección Resumen.</p>
             <p>Ahi podrás ver tus datos de una manera sencilla.</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-[radial-gradient(ellipse_60%_100%_at_90%_100%,#1278a0_0%,var(--color-bg-secondary)_50%)] rounded-lg h-full text-pretty text-center flex flex-col items-center justify-around p-2 sm:p-5 border border-bg-secondary border-b-[#1278a0]">
+          <div className="bg-[radial-gradient(ellipse_80%_50%_at_50%_110%,#1278a0_0%,var(--color-bg-secondary)_50%)] rounded-lg h-full text-pretty text-center flex flex-col items-center justify-around p-2 sm:p-5 border border-bg-secondary border-b-[#1278a0]">
             <p>Además, tenes la sección de Gráficos.</p>
             <p>Donde podrás ver tus datos de una forma visual.</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className=" bg-[radial-gradient(ellipse_60%_100%_at_90%_100%,#a18b0e_0%,var(--color-bg-secondary)_50%)] rounded-lg h-full text-pretty text-center flex flex-col items-center justify-around p-1 sm:p-5 border border-bg-secondary border-b-[#a18b0e]">
+          <div className=" bg-[radial-gradient(ellipse_80%_50%_at_50%_110%,#a18b0e_0%,var(--color-bg-secondary)_50%)] rounded-lg h-full text-pretty text-center flex flex-col items-center justify-around p-1 sm:p-5 border border-bg-secondary border-b-[#a18b0e]">
             <p>Tus datos se guardan en el LocalStorage.</p>
             <p>A medida que agregues simulaciones se irán guardando y mostrando en la sección Gráficos.</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-[radial-gradient(ellipse_60%_100%_at_90%_100%,#ad434c_0%,var(--color-bg-secondary)_50%)] rounded-lg h-full text-pretty text-center flex flex-col items-center justify-around p-2 sm:p-5 border border-bg-secondary border-b-[#ad434c]">
+          <div className="bg-[radial-gradient(ellipse_80%_50%_at_50%_110%,#ad434c_0%,var(--color-bg-secondary)_50%)] rounded-lg h-full text-pretty text-center flex flex-col items-center justify-around p-2 sm:p-5 border border-bg-secondary border-b-[#ad434c]">
             <p>Y Listo!</p>
             <p>Puedes empezar a probar la aplicación.</p>
             <p>¡Espero que te guste!</p>

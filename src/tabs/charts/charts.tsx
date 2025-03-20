@@ -50,7 +50,7 @@ export default function ChartsView() {
 
       {/* Valor del producto por mes */}
       <div className="bg-bg-secondary rounded-lg p-5 border border-primary-border/60">
-        <h3 className="text-lg font-medium text-white mb-4">Valor del producto por mes</h3>
+        <h3 className="text-lg font-base text-white mb-4">Valor del producto por mes</h3>
         <div className="h-64 w-full">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={localStorageCommission} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>

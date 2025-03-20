@@ -122,7 +122,7 @@ export default function Home() {
               {activeTab === "commission" ? (
                 <div className="animate-fade-in-y">
                   <div className="mb-4">
-                    <h2 className="text-xl font-bold">Comisiones</h2>
+                    <h2 className="text-xl font-medium">Comisiones</h2>
                     <p className="text-main-gray">Calcular los porcentajes de venta de tus productos.</p>
                   </div>
                   <CommissionSimulator />
@@ -131,7 +131,7 @@ export default function Home() {
               {activeTab === "charts" ? (
                 <div className="w-full animate-fade-in-y">
                   <div className="mb-4">
-                    <h2 className="text-xl font-bold">Gráficos</h2>
+                    <h2 className="text-xl font-medium">Gráficos</h2>
                     <p className="text-main-gray">Gráficos para tus ventas.</p>
                   </div>
                   <Charts />
@@ -140,7 +140,7 @@ export default function Home() {
               {activeTab === "summary" ? (
                 <div className="w-full animate-fade-in-y">
                   <div className="mb-4">
-                    <h2 className="text-xl font-bold">Resumen</h2>
+                    <h2 className="text-xl font-medium">Resumen</h2>
                     <p className="text-main-gray">Resumen completo de todos los datos</p>
                   </div>
                   <Summary />
