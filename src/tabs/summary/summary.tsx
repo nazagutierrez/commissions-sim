@@ -32,7 +32,7 @@ export default function Summary() {
           <div className="grid center grid-cols-1 md:grid-cols-3 xl:grid-cols-7 grid-rows-3 xl:grid-rows-1 gap-4 text-center">
             <div className="bg-primary/20 py-6 xxl:px-4 rounded-lg ">
               <p className="text-main-color text-md">Nombre</p>
-              <p className="text-md font-medium">
+              <p className="text-sm xxl:text-base font-medium">
                 {localCommission?.name || "Vacío"}
               </p>
             </div>
@@ -135,7 +135,7 @@ export default function Summary() {
         </div>
 
         <div className="flex flex-col items-center justify-around gap-4 h-full bg-bg-secondary rounded-lg">
-          <div className="p-6 w-full block text-center xl:flex items-center justify-center">
+          <div className="p-6 w-full block text-center xl:flex items-center justify-center gap-3">
             <h2 className="text-lg xl:text-xxl font-medium xl:mb-0 mb-4 text-center xl:w-1/2">
               Objetivo principal
             </h2>

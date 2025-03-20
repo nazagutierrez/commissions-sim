@@ -56,13 +56,13 @@ export default function ChartsView() {
             <BarChart data={localStorageCommission} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#4b5563" />
               <XAxis 
-                tickFormatter={val => val.slice(0, 3)}
+                tickFormatter={val => val?.slice(0, 3)}
                 dataKey="month" 
                 stroke="#ccc" 
               />
               <YAxis stroke="#ccc" />
               <Tooltip
-                formatter={(value) => [`$${Number(value).toLocaleString()}`, ""]}
+                formatter={(value) => [`$${Number(value)?.toLocaleString()}`, ""]}
                 contentStyle={{ backgroundColor: "#1f2937", borderColor: "#4b5563" }}
                 labelStyle={{ color: "#e5e7eb" }}
               />
@@ -91,7 +91,7 @@ export default function ChartsView() {
                   outerRadius={80}
                   paddingAngle={5}
                   dataKey="value"
-                  label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
+                  label={({ name, percent }) => `${name}: ${(percent * 100)?.toFixed(0)}%`}
                   labelLine={false}
                 >
                   <Cell fill="var(--color-primary)"/>
@@ -99,7 +99,7 @@ export default function ChartsView() {
                 </Pie>
                 <Tooltip
                   itemStyle={{ color: "#ccc" }} // Cambia el color de los items (los valores numéricos)
-                  formatter={(value) => [`$${Number(value).toLocaleString()}`, ""]}
+                  formatter={(value) => [`$${Number(value)?.toLocaleString()}`, ""]}
                   contentStyle={{ backgroundColor: "#1f2937", borderColor: "#4b5563", color: "#ccc" }}
                 />
               </PieChart>
@@ -115,7 +115,7 @@ export default function ChartsView() {
               <BarChart
                 data={[
                   { name: "Nuevos prospectos", value: localProspect?.newDataToProspect },
-                  { name: "Presentaciones mensuales", value: localProspect?.minPresentationsMonth.toFixed(0) },
+                  { name: "Presentaciones mensuales", value: localProspect?.minPresentationsMonth?.toFixed(0) },
                   { name: "Presentaciones semanales", value: localProspect?.minPresentationsWeek }, 
                 ]}
                 layout="vertical"
@@ -136,18 +136,18 @@ export default function ChartsView() {
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={[
                   { value: localProspect?.newDataToProspect },
-                  { value: localProspect?.minPresentationsMonth.toFixed(0) },
+                  { value: localProspect?.minPresentationsMonth?.toFixed(0) },
                   { value: localProspect?.minPresentationsWeek }, 
                 ]} >
                 <CartesianGrid strokeDasharray="3 3" stroke="#4b5563" />
                 <XAxis 
-                  tickFormatter={val => val.slice(0, 3)}
+                  tickFormatter={val => val?.slice(0, 3)}
                   dataKey="month" 
                   stroke="#ccc" 
                 />
                 <YAxis stroke="#ccc" domain={[0, 120]} />
                 <Tooltip
-                  formatter={(value) => [`${Number(value).toLocaleString()}`, ""]}
+                  formatter={(value) => [`${Number(value)?.toLocaleString()}`, ""]}
                   contentStyle={{ backgroundColor: "#1f2937", borderColor: "#4b5563" }}
                   labelStyle={{ color: "#e5e7eb" }}
                 />
