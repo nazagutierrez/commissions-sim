@@ -9,14 +9,17 @@ export default function Summary() {
   const [localProspect, setLocalProspect] = useState<ProspectData | null>(null);
   
   useEffect(() => {
+    // Recuperamos data del localstorage
     const goalDataRaw = localStorage.getItem("goalData");
     const prospectDataRaw = localStorage.getItem("prospectData");
     const commissionDataRaw = localStorage.getItem("commissionsData");
   
+    // Revisamos si exsite y la parseamos
     const goalArray: GoalData[] = goalDataRaw ? JSON.parse(goalDataRaw) : [];
     const prospectArray: ProspectData[] = prospectDataRaw ? JSON.parse(prospectDataRaw) : [];
     const commissionArray: CommissionsData[] = commissionDataRaw ? JSON.parse(commissionDataRaw) : [];
   
+    // Si hay datos en localstorage, seteamos los valores
     if (goalArray.length > 0) setLocalGoal(goalArray[goalArray.length - 1]);
     if (prospectArray.length > 0) setLocalProspect(prospectArray[prospectArray.length - 1]);
     if (commissionArray.length > 0) setLocalCommission(commissionArray[commissionArray.length - 1]);
@@ -24,6 +27,7 @@ export default function Summary() {
   
 
   return (
+    // Mostramos todos los datos
     <div className="h-full flex flex-col items-center justify-around gap-14 py-[44px]">
         <div className="bg-bg-secondary rounded-lg p-5 w-full ">
           <h2 className="text-lg xl:text-xxl font-medium mb-4 text-center xl:text-start">

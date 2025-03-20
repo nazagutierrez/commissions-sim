@@ -8,6 +8,7 @@ export const SupportAgentHome = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full xl:w-1/3 gap-14 text-main-white">
       <div className="flex flex-col xl:flex-row items-center justify-center gap-8">
+        {/* Imagen del asistente */}
         <img src={supportSvg} alt="support svg" className="w-[200px]" />
         <div className="relative px-4 py-3 flex bg-bg-secondary border rounded-md border-primary-border/70 shadow-xl flex-col items-start justify-center text-pretty gap-1">
           <div className="-top-5 xl:top-4 left-[50%] xl:-left-5 absolute w-[20px] h-[20px] bg-bg-secondary border xl:border-r-0 rounded-md border-primary-border shadow-xl xl:rounded-tr-none xl:rounded-br-none" />
@@ -20,6 +21,7 @@ export const SupportAgentHome = () => {
           </p>
         </div>
       </div>
+      {/* Swiper de los consejos y paso a paso */}
       <Swiper
         effect="cards"
         grabCursor={true}

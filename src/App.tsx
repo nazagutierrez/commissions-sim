@@ -12,6 +12,7 @@ import { MadeBy } from "./components/MadeBy";
 export default function Home() {
   const [activeTab, setActiveTab] = useState("commission")
 
+  // Inicializamos el contexto con datos por defecto
   const defaultCommissionsData: CommissionsContextType = {
     updateFlag: false,
     goalData: {
@@ -49,6 +50,7 @@ export default function Home() {
   const [commissionsData, setCommissionsData] = useState<CommissionsData>(defaultCommissionsData.commissionsData);
   const [updateFlag, setUpdateFlag] = useState(false);
 
+  // Redirigir automaticamente cuando se actualicen los datos
   useEffect(() => {
     if (!updateFlag) return
     setActiveTab("summary")
@@ -62,6 +64,7 @@ export default function Home() {
         <div className="container mx-auto pb-28 md:pb-10 pt-9 px-4 w-full">
           <div className="w-full">
             <div className="flex-col xl:flex-row flex items-center justify-around xl:justify-between mb-8 gap-8">
+              {/* Navbar para web */}
               <div className="flex-wrap w-[400px] hidden sm:flex rounded-lg overflow-hidden border border-primary-border/70">
                 <button
                   onClick={() => setActiveTab("commission")}
@@ -88,6 +91,8 @@ export default function Home() {
                   Resumen
                 </button>
               </div>
+
+              {/* Navbar para mobile */}
               <div className="z-50 w-full bottom-0 fixed sm:hidden flex rounded-tr-lg rounded-tl-lg overflow-hidden">
                 <button
                   onClick={() => setActiveTab("commission")}
@@ -118,7 +123,8 @@ export default function Home() {
                 Asistente de comisiones | Sinergia Creativa
               </h1>
             </div>
-
+                
+            {/* Contenido del componente */}
             <div className="bg-bg-primary rounded-lg border border-primary-border/60 p-6 w-full">
               {activeTab === "commission" ? (
                 <div className="animate-fade-in-y">

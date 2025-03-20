@@ -1,4 +1,3 @@
-"use client"
 import { useEffect, useState } from "react";
 import {
   BarChart,
@@ -25,15 +24,18 @@ export default function ChartsView() {
   const [localStorageCommission, setLocalCommissionStorage] = useState<CommissionsData[]>([]);
   
   useEffect(() => {
+    // Recuperamos data del localstorage
     const goalDataRaw = localStorage.getItem("goalData");
     const prospectDataRaw = localStorage.getItem("prospectData");
     const commissionDataRaw = localStorage.getItem("commissionsData");
   
+    // Revisamos si exsite y la parseamos
     const goalArray: GoalData[] = goalDataRaw ? JSON.parse(goalDataRaw) : [];
     const prospectArray: ProspectData[] = prospectDataRaw ? JSON.parse(prospectDataRaw) : [];
     const commissionArray: CommissionsData[] = commissionDataRaw ? JSON.parse(commissionDataRaw) : [];
     const commissionStorageArray: CommissionsData[] = commissionDataRaw ? JSON.parse(commissionDataRaw) : [];
   
+    // Si hay datos en localstorage, seteamos los valores
     if (goalArray.length > 0) setLocalGoal(goalArray);
     if (prospectArray.length > 0) setLocalProspect(prospectArray[prospectArray.length - 1]);
     if (commissionArray.length > 0) setLocalCommission(commissionArray[commissionArray.length - 1]);
@@ -99,7 +101,7 @@ export default function ChartsView() {
                   <Cell fill="var(--color-chart-secondary)" />
                 </Pie>
                 <Tooltip
-                  itemStyle={{ color: "#ccc" }} // Cambia el color de los items (los valores numéricos)
+                  itemStyle={{ color: "#ccc" }}
                   formatter={(value) => [`$${Number(value)?.toLocaleString()}`, ""]}
                   contentStyle={{ backgroundColor: "#1f2937", borderColor: "#4b5563", color: "#ccc" }}
                 />
@@ -115,6 +117,7 @@ export default function ChartsView() {
         {/* Datos a prospectar */}
         <div className="relative bg-bg-secondary rounded-lg p-4 border border-primary-border/60">
           <h1 className="absolute text-lg top-4 left-8">Datos a prospectar</h1>
+          {/* Vista web */}
           <div className="h-56 mt-10 w-full items-center justify-center hidden sm:flex">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart
@@ -137,6 +140,7 @@ export default function ChartsView() {
               </BarChart>
             </ResponsiveContainer>
           </div>
+          {/* Vista mobile */}
           <div className="h-56 mt-10 w-full flex flex-col items-center justify-center sm:hidden">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={[

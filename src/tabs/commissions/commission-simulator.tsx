@@ -10,12 +10,14 @@ export default function CommissionSimulator() {
   const [customCommission, setCustomCommission] = useState("");
 
   const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    // Revisamos que tipo de comision (custom o con select) y seteamos el valor
     setCommission(e.target.value);
     if (e.target.value !== "other") {
       setCustomCommission("");
     }
   };
 
+  // Función que devuelve el producto a partir del valor
   const ckeckProduct = (prodValue: number) => {
     if (prodValue === 700000) {
       return "Product A"
@@ -38,13 +40,16 @@ export default function CommissionSimulator() {
     }
   }
 
+
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
+    // Obtenemos los valores del formulario
     const formData = new FormData(e.currentTarget);
     const values = Object.fromEntries(formData.entries());
     const { name, month, productValue , commission, usdValue, usdTicket, profitGoal, conversionRate } = values;
     
+    // Verificamos que todos los valores sean correctos
     if (
       typeof name === "string" &&
       typeof month === "string" &&
@@ -59,12 +64,14 @@ export default function CommissionSimulator() {
       const numUsdTicket = Number(usdTicket)
       const numProductValue = Number(productValue)
       
+      // Si es other seteamos en custom, si no el select
       if (commission === "other") {
         numCommission = Number(customCommission)
       } else {
         numCommission = Number(commission)
       }
 
+      // Creamos el objeto con los datos nuevos
       const updatedCommissionsData = {
         name,
         month,
@@ -76,6 +83,7 @@ export default function CommissionSimulator() {
         conversionRate: conversionRate,
       }
 
+      // Calculamos la comision y seteamos los datos
       const updatedProfitGoal = Number(profitGoal)
       calculateCommission({updatedProfitGoal, updatedCommissionsData, setGoalData, setProspectData, setCommissionsData, setUpdateFlag})
     }
