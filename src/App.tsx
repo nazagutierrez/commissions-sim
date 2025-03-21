@@ -7,6 +7,7 @@ import chartWhite from "./assets/chartWhite.png"
 import homeWhite from "./assets/homeWhite.png"
 import summaryWhite from "./assets/summaryWhite.png"
 import { MadeBy } from "./components/MadeBy";
+import { ToggleThemes } from "./components/ToggleThemes";
 const Charts = React.lazy(() => import("./tabs/charts/charts"));
 
 
@@ -57,6 +58,7 @@ export default function Home() {
     setActiveTab("summary")
     setUpdateFlag(false)
   }, [updateFlag])
+
   
 
   return (
@@ -64,7 +66,7 @@ export default function Home() {
       <main className="min-h-screen bg-bg text-main-white w-full">
         <div className="container mx-auto pb-28 md:pb-10 pt-9 px-4 w-full">
           <div className="w-full">
-            <div className="flex-col xl:flex-row flex items-center justify-around xl:justify-between mb-8 gap-8">
+            <div className="flex-col xl:flex-row flex items-center justify-around xl:justify-between sm:mb-8 gap-8">
               {/* Navbar para web */}
               <div className="flex-wrap w-[400px] hidden sm:flex rounded-lg overflow-hidden border border-primary-border/70">
                 <button
@@ -130,6 +132,8 @@ export default function Home() {
                 Asistente de comisiones | Sinergia Creativa
               </h1>
             </div>
+
+            <ToggleThemes />
                 
             {/* Contenido del componente */}
             <div className="bg-bg-primary rounded-lg border border-primary-border/60 p-6 w-full">

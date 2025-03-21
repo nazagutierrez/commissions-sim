@@ -52,7 +52,7 @@ export default function ChartsView() {
 
       {/* Valor del producto por mes */}
       <div className="bg-bg-secondary rounded-lg p-5 border border-primary-border/60">
-        <h3 className="text-lg font-base text-white mb-4">Valor del producto por mes</h3>
+        <h3 className="text-lg font-base mb-4">Valor del producto por mes</h3>
         <div className="h-64 w-full">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={localStorageCommission} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
@@ -60,9 +60,9 @@ export default function ChartsView() {
               <XAxis 
                 tickFormatter={val => val?.slice(0, 3)}
                 dataKey="month" 
-                stroke="#ccc" 
+                stroke="var(--color-main-gray)"
               />
-              <YAxis stroke="#ccc" />
+              <YAxis stroke="var(--color-main-gray)" />
               <Tooltip
                 formatter={(value) => [`$${Number(value)?.toLocaleString()}`, ""]}
                 contentStyle={{ backgroundColor: "#1f2937", borderColor: "#4b5563" }}
@@ -130,8 +130,8 @@ export default function ChartsView() {
                 margin={{ top: 5, right: 30, left: 0, bottom: 5 }}
               >
                 <CartesianGrid strokeDasharray="3 3" stroke="#4b5563" /> 
-                <XAxis domain={[0, 100]} type="number" stroke="#9ca3af" /> 
-                <YAxis width={138} tickMargin={10} dataKey="name" type="category" stroke="#9ca3af" />
+                <XAxis domain={[0, 100]} type="number" stroke="var(--color-main-gray)" /> 
+                <YAxis width={138} tickMargin={10} dataKey="name" type="category" stroke="var(--color-main-gray)" />
                 <Tooltip
                   contentStyle={{ backgroundColor: "#1f2937", borderColor: "#4b5563" }}
                   labelStyle={{ color: "#e5e7eb" }}

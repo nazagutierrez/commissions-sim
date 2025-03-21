@@ -1,15 +1,17 @@
-import supportSvg from "../assets/support.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards } from "swiper/modules";
 import dragCursor from "../assets/dragCursor.svg";
 import 'swiper/swiper-bundle.css';
+import { MySvg } from "../assets/MySvg";
 
 export const SupportAgentHome = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full xl:w-1/3 gap-14 text-main-white">
       <div className="flex flex-col xl:flex-row items-center justify-center gap-8">
         {/* Imagen del asistente */}
-        <img src={supportSvg} alt="support svg" className="w-[200px]" />
+        <div className="w-fit h-auto"> 
+          <MySvg color="var(--color-primary)" />
+        </div>
         <div className="relative px-4 py-3 flex bg-bg-secondary border rounded-md border-primary-border/70 shadow-xl flex-col items-start justify-center text-pretty gap-1">
           <div className="-top-5 xl:top-4 left-[50%] xl:-left-5 absolute w-[20px] h-[20px] bg-bg-secondary border xl:border-r-0 rounded-md border-primary-border shadow-xl xl:rounded-tr-none xl:rounded-br-none" />
           <div className="-top-9 xl:top-8 left-[50%] xl:-left-9 absolute w-[15px] h-[15px] bg-bg-secondary border rounded-md border-primary-border shadow-xl" />

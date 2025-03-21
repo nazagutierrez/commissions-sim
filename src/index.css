@@ -6,6 +6,31 @@ html {
   font-style: normal;
 }
 
+@custom-variant orange (&:where(.orange, .orange *));
+@custom-variant light (&:where(.light, .light *));
+
+@layer theme {
+  .orange {
+    --color-primary: #c06c46;
+    --color-primary-border: #834f36;
+    
+    --color-main-gray: #a3a3a3;
+    --color-main-color: #ebbfab;
+  }
+  
+  .light {
+    --color-bg: #c4c4c4;
+    --color-bg-primary: #a3a3a3;
+    --color-bg-secondary: #929292;
+
+    --color-primary-border: #0737576e;
+
+    --color-main-white: #1f1f1f;
+    --color-main-gray: #4d4d4d;
+    --color-main-color: #153042;
+  }
+}
+
 @theme {
     /* Color principal */
     --color-primary: #095b92;
@@ -25,7 +50,6 @@ html {
     --color-chart-secondary: #bd8e2b;
 
     /* Gradientes y animaciones */
-    --gradient-custom: radial-gradient(ellipse 70% 90% at 50% 100%,#051f49,transparent 60%);
     --animate-fade-in-y: fade-in-y 0.3s ease-out;
     --animate-drag-cursor: drag-cursor 2s ease-out infinite;
 
