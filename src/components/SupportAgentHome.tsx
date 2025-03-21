@@ -26,7 +26,7 @@ export const SupportAgentHome = () => {
         effect="cards"
         grabCursor={true}
         modules={[EffectCards]}
-        className="sm:h-52 sm:w-72 h-44 w-52 sm:text-base text-sm"
+        className="sm:h-52 sm:w-72 h-56 w-44 sm:text-base text-sm"
       >
         <SwiperSlide>
           <div className="bg-[radial-gradient(ellipse_80%_50%_at_50%_110%,var(--color-primary)_0%,var(--color-bg-secondary)_50%)] rounded-lg h-full gap-2 text-pretty text-center flex flex-col items-center justify-between py-4 px-3 sm:p-5 border border-bg-secondary border-b-primary/50">
