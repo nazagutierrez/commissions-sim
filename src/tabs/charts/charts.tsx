@@ -152,9 +152,9 @@ export default function ChartsView() {
                 <XAxis 
                   tickFormatter={val => val?.slice(0, 3)}
                   dataKey="name" 
-                  stroke="#ccc" 
+                  stroke="var(--color-main-gray)" 
                 />
-                <YAxis stroke="#ccc" domain={[0, 120]} />
+                <YAxis stroke="var(--color-main-gray)" domain={[0, 120]} />
                 <Tooltip
                   formatter={(value) => [`${Number(value)?.toLocaleString()}`, ""]}
                   contentStyle={{ fontSize: "12px", backgroundColor: "#1f2937", borderColor: "#4b5563" }}

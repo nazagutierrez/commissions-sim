@@ -6,6 +6,9 @@ import Summary from "./tabs/summary/summary"
 import chartWhite from "./assets/chartWhite.png"
 import homeWhite from "./assets/homeWhite.png"
 import summaryWhite from "./assets/summaryWhite.png"
+import homeDark from "./assets/homeDark.png"
+import summaryDark from "./assets/summaryDark.png"
+import chartDark from "./assets/chartDark.png"
 import { MadeBy } from "./components/MadeBy";
 import { ToggleThemes } from "./components/ToggleThemes";
 const Charts = React.lazy(() => import("./tabs/charts/charts"));
@@ -107,7 +110,8 @@ export default function Home() {
                     activeTab === "commission" ? "bg-primary" : "bg-bg-primary text-main-gray hover:bg-primary"
                   }`}
                 >
-                  <img className="w-5 h-5" src={homeWhite} alt="Icono de grafico" />
+                  <img className="w-5 light:hidden h-5" src={homeWhite} alt="Icono de grafico" />
+                  <img className="w-5 hidden light:block h-5" src={homeDark} alt="Icono de grafico" />
                 </button>
                 <button
                   type="button"
@@ -116,7 +120,8 @@ export default function Home() {
                     activeTab === "charts" ? "bg-primary" : "bg-bg-primary text-main-gray hover:bg-primary"
                   }`}
                 >
-                  <img className="w-5 h-5" src={chartWhite} alt="Icono de grafico" />
+                  <img className="w-5 light:hidden h-5" src={chartWhite} alt="Icono de grafico" />
+                  <img className="w-5 hidden light:block h-5" src={chartDark} alt="Icono de grafico" />
                 </button>
                 <button
                   type="button"
@@ -125,7 +130,8 @@ export default function Home() {
                     activeTab === "summary" ? "bg-primary" : "bg-bg-primary text-main-gray hover:bg-primary"
                   }`}
                 >
-                  <img className="w-5 h-5" src={summaryWhite} alt="Icono de grafico" />
+                  <img className="w-5 light:hidden h-5" src={summaryWhite} alt="Icono de grafico" />
+                  <img className="w-5 hidden light:block h-5" src={summaryDark} alt="Icono de grafico" />
                 </button>
               </div>
               <h1 className="text-xl text-center bg-bg-primary px-5 py-1 rounded-lg border border-b-primary-border border-bg-primary">
