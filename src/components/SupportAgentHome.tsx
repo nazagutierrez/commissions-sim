@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards } from "swiper/modules";
 import dragCursor from "../assets/dragCursor.svg";
+import dragCursorDark from "../assets/dragCursorDark.svg";
 import 'swiper/swiper-bundle.css';
 import { MySvg } from "../assets/MySvg";
 
@@ -62,7 +63,10 @@ export const SupportAgentHome = () => {
             <p>¡Espero que te guste!</p>
           </div>
         </SwiperSlide>
-        <img className="opacity-65 w-6 justify-self-center mt-2 animate-drag-cursor" src={dragCursor} alt="cursor animado" />
+
+        {/* cursor drag */}
+        <img className="opacity-65 w-6 justify-self-center mt-2 light:hidden animate-drag-cursor" src={dragCursor} alt="cursor animado" />
+        <img className="opacity-65 w-6 justify-self-center mt-2 hidden light:block animate-drag-cursor " src={dragCursorDark} alt="cursor animado" />
       </Swiper>
     </div>
   );
