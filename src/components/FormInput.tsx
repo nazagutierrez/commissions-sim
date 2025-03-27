@@ -7,6 +7,7 @@ export const FormInput = ({label, name, type, placeholder, text}: { label: strin
       <input
         id={name}
         min={0}
+        maxLength={name === "name" && 30 || name === "month" && 10 || name === "conversionRate" && 4 || 30}
         max={100000000}
         required
         name={name}
